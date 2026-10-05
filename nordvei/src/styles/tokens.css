@@ -1,0 +1,95 @@
+/*
+ * Design tokens: "alpine banking at blue hour".
+ * Dark, hushed, monochrome, with ONE nature accent.
+ *
+ * To change the accent colour, edit --color-accent only.
+ * It is used solely for the primary "Book your trip" / "Confirm booking" action.
+ */
+
+:root {
+  /* Accent: the only colour on the site */
+  --color-accent: #8fb573;
+  --color-on-accent: #171721;
+  --color-accent-hover: color-mix(in srgb, var(--color-accent) 85%, #ffffff);
+
+  /* Surfaces, darkest to lightest. Separation by value, never by shadow. */
+  --color-canvas: #171721;
+  --color-card: #1e1e2a;
+  --color-card-hover: #222230;
+  --color-surface: #272735;
+  --color-surface-hover: #30303f;
+
+  /* Text */
+  --color-text: #ededf3;
+  --color-text-muted: #c3c3cc;
+  --color-text-dim: #9a9aa6;
+  --color-hero: #ffffff;
+
+  /* Lines */
+  --color-border: #e2e3ed;
+  --color-divider: #70707d;
+  --color-hairline: rgba(112, 112, 125, 0.35);
+
+  /* Type */
+  --font-display: 'Archivo', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 480;
+  --display-stretch: 118%;
+
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-21: 1.3125rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-42: 2.625rem;
+  --fs-65: 4.0625rem;
+
+  /* Spacing: 4px base unit */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-18: 72px;
+  --s-24: 96px;
+
+  --section-gap: var(--s-18);
+  --max-width: 1200px;
+  --gutter: 16px;
+  --nav-height: 72px;
+
+  /* Shape */
+  --radius-card: 12px;
+  --radius-inset: 10px;
+  --radius-pill: 40px;
+  --card-padding: 32px;
+
+  /* Motion: calm and slow */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 200ms;
+  --dur: 360ms;
+  --dur-slow: 1100ms;
+
+  color-scheme: dark;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media (max-width: 599px) {
+  :root {
+    --card-padding: 24px;
+    --section-gap: var(--s-16);
+  }
+}
